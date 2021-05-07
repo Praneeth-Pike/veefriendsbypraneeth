@@ -21,7 +21,7 @@ const Header = props => {
 	const data = useMockConnection()
 
 	const { scrollYProgress } = useViewportScroll()
-	const y = useTransform(scrollYProgress, [0, 0.25], [-500, 0])
+	const y = useTransform(scrollYProgress, [0, 0.15], [-500, 0])
 	return (
 		<header tw="w-screen py-4 fixed top-0 left-0 z-50">
 			<BgSpan initial={{ y: -500 }} style={{ y }} />

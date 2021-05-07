@@ -74,7 +74,7 @@ const Home = () => {
 				<main tw="relative z-20">
 					<Section>
 						<Row tw="flex-col items-center justify-center text-center">
-							<div tw="w-4/5 md:w-2/3 text-center mt-40">
+							<div tw="w-full lg:w-2/3 text-center mt-40">
 								<h1 tw="text-8xl font-primary font-bold text-gray-700 mb-2 leading-none tracking-tight">
 									The way <span tw="text-green">NFTs</span> should be.
 								</h1>
@@ -141,8 +141,8 @@ const Home = () => {
 
 					{/* Section Three */}
 					<Section tw="flex flex-col justify-center items-start bg-blue">
-						<Row tw="flex-col-reverse md:flex-row">
-							<div tw="w-full md:w-2/5">
+						<Row tw="flex-col-reverse lg:flex-row">
+							<div tw="w-full lg:w-2/5">
 								<h2 tw="text-5xl font-primary text-gray-600 tracking-tight mb-8 text-white">
 									Admission
 									<br />
@@ -164,15 +164,15 @@ const Home = () => {
 									See All Access Tokens
 								</Button>
 							</div>
-							<div tw="flex w-full md:w-3/5 md:px-12">
+							<div tw="flex w-full lg:w-3/5 lg:px-12">
 								<SampleCard tw="bg-blue-400 w-1/2 -mt-24 mx-2" />
 								<SampleCard tw="bg-blue-400 w-1/2" />
 							</div>
 						</Row>
 					</Section>
 					<Section tw="flex flex-col justify-center items-start">
-						<Row tw="flex-col-reverse md:flex-row">
-							<div tw="w-full md:w-2/5">
+						<Row tw="flex-col-reverse lg:flex-row">
+							<div tw="w-full lg:w-2/5">
 								<h2 tw="text-5xl font-primary text-gray-600 tracking-tight mb-8">
 									Gift
 									<br />
@@ -194,7 +194,7 @@ const Home = () => {
 									See All Access Tokens
 								</Button>
 							</div>
-							<div tw="flex w-full md:w-3/5 md:px-12">
+							<div tw="flex w-full lg:w-3/5 lg:px-12">
 								<SampleCard tw="bg-blue-400 w-1/2 -mt-24 mx-2" />
 								<SampleCard tw="bg-blue-400 w-1/2" />
 							</div>
