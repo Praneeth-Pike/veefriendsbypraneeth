@@ -34,11 +34,7 @@ const Header = props => {
 			<BgSpan initial={{ y: -500 }} style={{ y }} />
 			<Row tw="justify-between relative">
 				<Link href="/">
-					<Image
-						src="/images/logo.png"
-						height={isDesktopOrLaptop ? 35 : 17.7}
-						width={isDesktopOrLaptop ? 182 : 91}
-					/>
+					<Image src="/images/logo.png" height={35} width={182} />
 				</Link>
 
 				<div tw="flex items-center justify-end space-x-8">

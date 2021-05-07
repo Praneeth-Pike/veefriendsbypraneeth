@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useCookies } from "react-cookie"
 import styled from "styled-components"
 import tw from "twin.macro"
 
@@ -15,10 +16,12 @@ const Pic = styled.div`
 `
 
 const ConnectionPill = props => {
+	const [cookies, _, removeCookie] = useCookies()
 	const { data }: { data: MockConnection } = props
 
 	const handleLogout = () => {
 		if (window.confirm("Do you want to log out?")) {
+			removeCookie("mock_connection")
 			localStorage.clear()
 			sessionStorage.clear()
 		}
