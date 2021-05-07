@@ -7,6 +7,7 @@ import Link from "next/link"
 import styled from "styled-components"
 import tw from "twin.macro"
 import ConnectionPill from "components/atoms/ConnectionPill"
+import { useMediaQuery } from "react-responsive"
 
 const BgSpan = styled(motion.span)`
 	${tw`w-full h-full absolute top-0 left-0`}
@@ -17,17 +18,27 @@ const BgSpan = styled(motion.span)`
 
 const Header = props => {
 	const { onConnectClick }: { onConnectClick: VoidFunction } = props
-	// const y = useTransform(scrollYProgress, [0, 0.15], [-200, 0])
 	const data = useMockConnection()
 
+	// Scroll based animation for headerBg
 	const { scrollYProgress } = useViewportScroll()
 	const y = useTransform(scrollYProgress, [0, 0.15], [-500, 0])
+
+	// For responsive changes
+	const isDesktopOrLaptop = useMediaQuery({
+		query: "(min-device-width: 1024px)",
+	})
+
 	return (
 		<header tw="w-screen py-4 fixed top-0 left-0 z-50">
 			<BgSpan initial={{ y: -500 }} style={{ y }} />
 			<Row tw="justify-between relative">
 				<Link href="/">
-					<Image src="/images/logo.png" height="35" width="182" />
+					<Image
+						src="/images/logo.png"
+						height={isDesktopOrLaptop ? 35 : 17.7}
+						width={isDesktopOrLaptop ? 182 : 91}
+					/>
 				</Link>
 				<div tw="hidden md:flex items-center justify-end space-x-8">
 					<Link href="/faqs">

@@ -4,29 +4,34 @@ import Image from "next/image"
 import Link from "next/link"
 import Row from "components/layouts/Row"
 import Button from "components/atoms/Button"
+import { useMediaQuery } from "react-responsive"
 
 const Wrapper = styled.footer`
 	${tw`min-h-screen flex flex-col items-start justify-center bg-gray-50`}
 `
 
 const Footer = props => {
+	// For responsive changes
+	const isDesktopOrLaptop = useMediaQuery({
+		query: "(min-device-width: 1024px)",
+	})
 	return (
 		<Wrapper>
 			<Row tw="items-start flex-col-reverse md:flex-row">
 				<div tw="w-full md:w-1/3">
 					<div tw="flex flex-col items-start space-y-8">
 						<Link href="/faq">
-							<button tw="text-4xl font-secondary font-bold text-black tracking-tight">
+							<button tw="text-2xl md:text-3xl lg:text-4xl font-secondary font-bold text-black tracking-tight">
 								FAQs
 							</button>
 						</Link>
 						<Link href="/collections">
-							<button tw="text-4xl font-secondary font-bold text-black tracking-tight">
+							<button tw="text-2xl md:text-3xl lg:text-4xl font-secondary font-bold text-black tracking-tight">
 								Collections
 							</button>
 						</Link>
 						<Link href="/collections">
-							<button tw="text-4xl font-secondary font-bold text-black tracking-tight">
+							<button tw="text-2xl md:text-3xl lg:text-4xl font-secondary font-bold text-black tracking-tight">
 								VeeCon
 							</button>
 						</Link>
@@ -38,8 +43,8 @@ const Footer = props => {
 								rel="noreferrer">
 								<Image
 									src="/images/svg/Discord-Logo-Black.svg"
-									height={66}
-									width={68}
+									height={isDesktopOrLaptop ? 66 : 33}
+									width={isDesktopOrLaptop ? 68 : 34}
 									alt="Discord Icon"
 								/>
 							</a>
@@ -49,8 +54,8 @@ const Footer = props => {
 								rel="noreferrer">
 								<Image
 									src="/images/svg/instagram.svg"
-									height={53}
-									width={53}
+									height={isDesktopOrLaptop ? 53 : 26.5}
+									width={isDesktopOrLaptop ? 53 : 26.5}
 									alt="Instagram Icon"
 								/>
 							</a>
@@ -60,8 +65,8 @@ const Footer = props => {
 								rel="noreferrer">
 								<Image
 									src="/images/svg/twitter.svg"
-									height={53}
-									width={53}
+									height={isDesktopOrLaptop ? 53 : 26.5}
+									width={isDesktopOrLaptop ? 53 : 26.5}
 									alt="Twitter Icon"
 								/>
 							</a>
