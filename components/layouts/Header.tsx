@@ -40,12 +40,12 @@ const Header = props => {
 				<div tw="flex items-center justify-end space-x-8">
 					{isDesktopOrLaptop && (
 						<>
-							<Link href="/faqs">
+							<Link href="/collections">
 								<a tw="text-xl font-bold text-gray-400 hover:opacity-50 cursor-pointer">
 									Collections
 								</a>
 							</Link>
-							<Link href="/faqs">
+							<Link href="/faq">
 								<a tw="text-xl font-bold text-gray-400 hover:opacity-50 cursor-pointer">
 									FAQs
 								</a>
