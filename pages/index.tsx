@@ -75,10 +75,10 @@ const Home = () => {
 					<Section>
 						<Row tw="flex-col items-center justify-center text-center">
 							<div tw="w-full lg:w-2/3 text-center mt-40">
-								<h1 tw="text-8xl font-primary font-bold text-gray-700 mb-2 leading-none tracking-tight">
+								<h1 tw="text-4xl md:text-6xl lg:text-8xl font-primary font-bold text-gray-700 mb-2 leading-none tracking-tight">
 									The way <span tw="text-green">NFTs</span> should be.
 								</h1>
-								<p>
+								<p tw="mt-2">
 									The main ambition of this project is to create
 									meaningful intellectual property and create an
 									extraordinary community. All tokens are a three-year
