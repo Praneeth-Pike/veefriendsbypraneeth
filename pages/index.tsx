@@ -149,13 +149,7 @@ const Home = () => {
 									Tokens
 								</h2>
 								<p tw="text-gray-100">
-									Admission Tokens are tokens that come with different
-									levels of rarity and collectability. There are 9,400
-									Admission Tokens. What’s unique about the Admission
-									tokens is that there are different quantity levels
-									within each character type. Additionally, Admission
-									tokens, like all VeeFriends tokens, receive a three
-									year access pass to VeeCon.
+									Admission Tokens are tokens that come with different levels of rarity and collectability. There are 9,400 Admission Tokens. What’s unique about the Admission tokens is that there are different quantity levels within each character type. Additionally, Admission tokens, like all VeeFriends tokens, receive a three year access pass to VeeCon
 								</p>
 								<Button
 									type="secondary"
@@ -179,13 +173,11 @@ const Home = () => {
 									Tokens
 								</h2>
 								<p>
-									Admission Tokens are tokens that come with different
-									levels of rarity and collectability. There are 9,400
-									Admission Tokens. What’s unique about the Admission
-									tokens is that there are different quantity levels
-									within each character type. Additionally, Admission
-									tokens, like all VeeFriends tokens, receive a three
-									year access pass to VeeCon.
+									VeeFriends Gift tokens are verifiable tokens to a
+									gifting experience curated by Gary and the VeeFriends
+									team. There are 555 gift tokens. Additionally,
+									VeeFriends Gift tokens, like all VeeFriends tokens,
+									receive a three year access pass to VeeCon.
 								</p>
 								<Button
 									type="secondary"
