@@ -7,6 +7,7 @@ import tw from "twin.macro"
 import styled from "styled-components"
 import ReactPlayer from "react-player"
 import QRCode from "react-qr-code"
+import { useCookies } from "react-cookie"
 import Row from "components/layouts/Row"
 import SampleCard from "components/cards/SampleCard"
 import Header from "components/layouts/Header"
@@ -15,7 +16,7 @@ import Modal from "components/layouts/Modal"
 import Button from "components/atoms/Button"
 
 const Section = styled.div`
-	${tw`min-h-screen`}
+	${tw`min-h-screen py-32 md:px-4`}
 `
 const SquigglesLayer = styled.div`
 	${tw`absolute top-0 left-0 w-full`}
@@ -28,8 +29,26 @@ const Home = () => {
 	const router = useRouter()
 	const [showModal, toggleModal] = useState(false)
 
+	const [_, setCookie] = useCookies()
+
+	const createMockConnection = () => {
+		/**
+		 * Creates a Mock Cookie as if the use is connected
+		 */
+		const data: MockConnection = {
+			name: "praneeth pike",
+			eth: 16.18,
+			publicAddress: "x6789012z234546709",
+			profileImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
+		}
+		setCookie("mock_connection", data)
+		// Close the connection modal
+		toggleModal(false)
+	}
+
 	// Handler functions
 	const handleNavigate = (to: string) => {
+		// Just a utility function to navigation via onClick buttons
 		router.push(`/${to}`)
 	}
 
@@ -90,8 +109,8 @@ const Home = () => {
 
 					{/* Section Two | Access Tokens */}
 					<Section tw="flex flex-col justify-center items-start">
-						<Row>
-							<div tw="w-2/5">
+						<Row tw="flex-col-reverse md:flex-row">
+							<div tw="w-full md:w-2/5">
 								<h2 tw="text-5xl font-primary text-gray-600 tracking-tight mb-8">
 									Access
 									<br />
@@ -113,7 +132,7 @@ const Home = () => {
 									See All Access Tokens
 								</Button>
 							</div>
-							<div tw="flex w-3/5 px-12">
+							<div tw="flex w-full md:w-3/5 md:px-12">
 								<SampleCard tw="bg-blue-400 w-1/2 -mt-24 mx-2" />
 								<SampleCard tw="bg-blue-400 w-1/2" />
 							</div>
@@ -122,8 +141,8 @@ const Home = () => {
 
 					{/* Section Three */}
 					<Section tw="flex flex-col justify-center items-start bg-blue">
-						<Row>
-							<div tw="w-2/5">
+						<Row tw="flex-col-reverse md:flex-row">
+							<div tw="w-full md:w-2/5">
 								<h2 tw="text-5xl font-primary text-gray-600 tracking-tight mb-8 text-white">
 									Admission
 									<br />
@@ -145,15 +164,15 @@ const Home = () => {
 									See All Access Tokens
 								</Button>
 							</div>
-							<div tw="flex w-3/5 px-12">
+							<div tw="flex w-full md:w-3/5 md:px-12">
 								<SampleCard tw="bg-blue-400 w-1/2 -mt-24 mx-2" />
 								<SampleCard tw="bg-blue-400 w-1/2" />
 							</div>
 						</Row>
 					</Section>
 					<Section tw="flex flex-col justify-center items-start">
-						<Row>
-							<div tw="w-2/5">
+						<Row tw="flex-col-reverse md:flex-row">
+							<div tw="w-full md:w-2/5">
 								<h2 tw="text-5xl font-primary text-gray-600 tracking-tight mb-8">
 									Gift
 									<br />
@@ -175,7 +194,7 @@ const Home = () => {
 									See All Access Tokens
 								</Button>
 							</div>
-							<div tw="flex w-3/5 px-12">
+							<div tw="flex w-full md:w-3/5 md:px-12">
 								<SampleCard tw="bg-blue-400 w-1/2 -mt-24 mx-2" />
 								<SampleCard tw="bg-blue-400 w-1/2" />
 							</div>
@@ -194,8 +213,10 @@ const Home = () => {
 					</h3>
 					<p tw="mb-4 text-gray-200">This is only a mock connection.</p>
 					<QRCode value="hey" size={256} />
-					<Button type="teritiary" tw="mt-4">
-						Mock Connection
+					<Button
+						tw="mt-4 bg-blue-100 text-black"
+						onClick={() => createMockConnection()}>
+						Tap to Mimic Connection
 					</Button>
 				</div>
 			</Modal>

@@ -1,10 +1,12 @@
 import Button from "components/atoms/Button"
 import Row from "components/layouts/Row"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
+import useMockConnection from "hooks/useMockConnection"
 import Image from "next/image"
 import Link from "next/link"
 import styled from "styled-components"
 import tw from "twin.macro"
+import ConnectionPill from "components/atoms/ConnectionPill"
 
 const BgSpan = styled(motion.span)`
 	${tw`w-full h-full absolute top-0 left-0`}
@@ -16,6 +18,7 @@ const BgSpan = styled(motion.span)`
 const Header = props => {
 	const { onConnectClick }: { onConnectClick: VoidFunction } = props
 	// const y = useTransform(scrollYProgress, [0, 0.15], [-200, 0])
+	const data = useMockConnection()
 
 	const { scrollYProgress } = useViewportScroll()
 	const y = useTransform(scrollYProgress, [0, 0.25], [-500, 0])
@@ -37,9 +40,13 @@ const Header = props => {
 							FAQs
 						</a>
 					</Link>
-					<Button type="primary" onClick={() => onConnectClick()}>
-						Connect Wallet
-					</Button>
+					{data?.name ? (
+						<ConnectionPill data={data} />
+					) : (
+						<Button type="primary" onClick={() => onConnectClick()}>
+							Connect Wallet
+						</Button>
+					)}
 				</div>
 			</Row>
 		</header>
