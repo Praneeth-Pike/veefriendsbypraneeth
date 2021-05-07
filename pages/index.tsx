@@ -128,7 +128,7 @@ const Home = () => {
 								<Button
 									type="secondary"
 									tw="mt-12 -ml-px"
-									onClick={() => handleNavigate("/collections")}>
+									onClick={() => handleNavigate("collections")}>
 									See All Access Tokens
 								</Button>
 							</div>
@@ -160,7 +160,7 @@ const Home = () => {
 								<Button
 									type="secondary"
 									tw="mt-12 -ml-px bg-white text-black"
-									onClick={() => handleNavigate("/collections")}>
+									onClick={() => handleNavigate("collections")}>
 									See All Access Tokens
 								</Button>
 							</div>
@@ -190,7 +190,7 @@ const Home = () => {
 								<Button
 									type="secondary"
 									tw="mt-12 -ml-px"
-									onClick={() => handleNavigate("/collections")}>
+									onClick={() => handleNavigate("collections")}>
 									See All Access Tokens
 								</Button>
 							</div>
