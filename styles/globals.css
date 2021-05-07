@@ -1,8 +1,37 @@
+:root{
+	--gray-100: #BBCEE1;
+	--gray-200: #769EC2;
+	--gray-300: #426C94;
+	--gray-400: #011A32;
+	--gray-500: #1B2C3C;
+	--gray-600: #121D28;
+	--gray-700: #090F14;
+
+  /* Blue */
+  --blue-100: #B4DAFD;
+	--blue-200: #69B5FC;
+	--blue-300: #1E91FA;
+	--blue-400: #046AC8;
+	--blue-500: #034F96;
+	--blue-600: #023564;
+	--blue-700: #011A32;
+
+  /* Green */
+  --green-100: #AFFFCF;
+	--green-200: #5FFF9F;
+	--green-300: #0FFF6F;
+	--green-400: #00BE4C;
+	--green-500: #008F39;
+	--green-600: #005F26;
+	--green-700: #003013;
+
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "sk-modernist", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
