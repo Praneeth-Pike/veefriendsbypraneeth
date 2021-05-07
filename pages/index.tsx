@@ -5,17 +5,27 @@ import tw from "twin.macro"
 import styled from "styled-components"
 import Row from "components/layouts/Row"
 import ReactPlayer from "react-player"
+import SampleCard from "components/cards/SampleCard"
+import Footer from "components/layouts/Footer"
 
 const Section = styled.div`
 	${tw`min-h-screen`}
 `
+const SquigglesLayer = styled.div`
+	${tw`absolute top-0 left-0 w-full`}
+	height: 500vh;
+	z-index: 0;
+`
 
 const Home = () => {
 	return (
-		<div>
+		<div tw="relative">
+			<SquigglesLayer>
+				<Image src="/images/squiggles.png" layout="fill" />
+			</SquigglesLayer>
 			<Head>
 				<head>
-					<title>VeeFriends • NFT Project</title>
+					<title>VeeFriends • Proposal by @praneethpike</title>
 					<meta
 						name="description"
 						content="VeeFriends NFT Projects owned by VeeFriends,LLC. Built by @praneethpike"
@@ -37,7 +47,7 @@ const Home = () => {
 				</Row>
 			</header>
 
-			<main>
+			<main tw="relative z-20">
 				<Section>
 					<Row tw="flex-col items-center justify-center text-center">
 						<div tw="w-4/5 md:w-2/3 text-center mt-40">
@@ -55,7 +65,7 @@ const Home = () => {
 						</div>
 
 						{/* Video Player */}
-						<div tw="w-full md:w-11/12 rounded-lg my-12 overflow-hidden shadow-xl">
+						<div tw="w-full rounded-lg my-12 overflow-hidden shadow-xl">
 							<ReactPlayer
 								controls={false}
 								style={{ borderRadius: "2rem" }}
@@ -66,7 +76,88 @@ const Home = () => {
 						</div>
 					</Row>
 				</Section>
+
+				{/* Section Two | Access Tokens */}
+				<Section tw="flex flex-col justify-center items-start">
+					<Row>
+						<div tw="w-2/5">
+							<h2 tw="text-5xl font-primary text-gray-600 tracking-tight mb-8">
+								Access Tokens
+							</h2>
+							<p>
+								Admission Tokens are tokens that come with different
+								levels of rarity and collectability. There are 9,400
+								Admission Tokens. What’s unique about the Admission tokens
+								is that there are different quantity levels within each
+								character type. Additionally, Admission tokens, like all
+								VeeFriends tokens, receive a three year access pass to
+								VeeCon.
+							</p>
+							<button tw="rounded-full bg-black text-white mt-8 -ml-px text-center font-bold font-secondary px-6 py-4">
+								See All Access Tokens
+							</button>
+						</div>
+						<div tw="flex w-3/5 px-12">
+							<SampleCard tw="bg-blue-400 w-1/2 -mt-24 mx-2" />
+							<SampleCard tw="bg-blue-400 w-1/2" />
+						</div>
+					</Row>
+				</Section>
+
+				{/* Section Three */}
+				<Section tw="flex flex-col justify-center items-start bg-blue">
+					<Row>
+						<div tw="w-2/5">
+							<h2 tw="text-5xl font-primary text-gray-600 tracking-tight mb-8 text-white">
+								Admission Tokens
+							</h2>
+							<p tw="text-gray-100">
+								Admission Tokens are tokens that come with different
+								levels of rarity and collectability. There are 9,400
+								Admission Tokens. What’s unique about the Admission tokens
+								is that there are different quantity levels within each
+								character type. Additionally, Admission tokens, like all
+								VeeFriends tokens, receive a three year access pass to
+								VeeCon.
+							</p>
+							<button tw="rounded-full bg-black text-white mt-8 -ml-px text-center font-bold font-secondary px-6 py-4">
+								See All Access Tokens
+							</button>
+						</div>
+						<div tw="flex w-3/5 px-12">
+							<SampleCard tw="bg-blue-400 w-1/2 -mt-24 mx-2" />
+							<SampleCard tw="bg-blue-400 w-1/2" />
+						</div>
+					</Row>
+				</Section>
+				<Section tw="flex flex-col justify-center items-start">
+					<Row>
+						<div tw="w-2/5">
+							<h2 tw="text-5xl font-primary text-gray-600 tracking-tight mb-8">
+								Gift Tokens
+							</h2>
+							<p>
+								Admission Tokens are tokens that come with different
+								levels of rarity and collectability. There are 9,400
+								Admission Tokens. What’s unique about the Admission tokens
+								is that there are different quantity levels within each
+								character type. Additionally, Admission tokens, like all
+								VeeFriends tokens, receive a three year access pass to
+								VeeCon.
+							</p>
+							<button tw="rounded-full bg-black text-white mt-8 -ml-px text-center font-bold font-secondary px-6 py-4">
+								See All Access Tokens
+							</button>
+						</div>
+						<div tw="flex w-3/5 px-12">
+							<SampleCard tw="bg-blue-400 w-1/2 -mt-24 mx-2" />
+							<SampleCard tw="bg-blue-400 w-1/2" />
+						</div>
+					</Row>
+				</Section>
 			</main>
+
+			<Footer />
 		</div>
 	)
 }

@@ -3,7 +3,7 @@ import tw, { theme, GlobalStyles as BaseStyles } from "twin.macro"
 
 const CustomStyles = createGlobalStyle`
   html{
-    font-size: 16px;
+    font-size: 14px;
   }
   @media only screen and (min-width: 320px){
     html{
