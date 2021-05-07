@@ -61,6 +61,14 @@ module.exports = {
 				"Arial",
 				"sans-serif",
 			],
+			secondary: [
+				"sk-modernist",
+				"Helvetica",
+				"-apple-system",
+				"BlinkMacSystemFont",
+				"Arial",
+				"sans-serif",
+			],
 		},
 	},
 	variants: {
